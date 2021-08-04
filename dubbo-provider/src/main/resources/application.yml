@@ -1,0 +1,29 @@
+
+spring:
+  #设置连接数据库信息
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 452000Xu
+    url: jdbc:mysql://192.168.217.129:3306/springboot
+  #设置连接redis的信息
+  redis:
+    host: 192.168.217.129
+    port: 6379
+    password: 123456
+
+#设置dubbo配置
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+    address: 192.168.217.129:2181
+    protocol: zookeeper
+  scan:
+    base-packages: com.xihai.service
+
+#设置端口及访问路径
+server:
+  port: 8081
+  servlet:
+    context-path: /
